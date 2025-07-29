@@ -203,14 +203,14 @@ tests-mypy = ["mypy (>=1.11.1) ; platform_python_implementation == \"CPython\" a
 
 [[package]]
 name = "beeai-framework"
-version = "0.1.25"
+version = "0.1.32"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.11"
 groups = ["main"]
 files = [
-    {file = "beeai_framework-0.1.25-py3-none-any.whl", hash = "sha256:37940a48fb65a0cd88ffe76bc350088246ffab5bf1b1011a146dadbb196d95c3"},
-    {file = "beeai_framework-0.1.25.tar.gz", hash = "sha256:1181a961566793186fd182740323beb256a55999edd312623065a707beb4983d"},
+    {file = "beeai_framework-0.1.32-py3-none-any.whl", hash = "sha256:0d7fafd39249dddf551b33dfd1430d560235fa17acd8035a2a5c83ae97842652"},
+    {file = "beeai_framework-0.1.32.tar.gz", hash = "sha256:f520dc931be6de63bf76cb8f9faab14d3b6d457d14ca810444a0f5c32204271e"},
 ]
 
 [package.dependencies]
@@ -219,20 +219,22 @@ cachetools = ">=5.5.2,<6.0.0"
 chevron = ">=0.14.0,<0.15.0"
 json-repair = ">=0.39.0,<0.40.0"
 jsonref = ">=1.1.0,<2.0.0"
-litellm = ">=1.60.0,<2.0.0"
+litellm = ">=1.69.3,<2.0.0"
 pydantic = ">=2.10,<3.0"
 pydantic-settings = ">=2.9.0,<3.0.0"
 requests = ">=2.32,<3.0"
-wikipedia-api = {version = ">=0.8.1,<0.9.0", optional = true, markers = "extra == \"search\" or extra == \"wikipedia\""}
+wikipedia-api = {version = ">=0.8.1,<0.9.0", optional = true, markers = "extra == \"search\" or extra == \"wikipedia\" or extra == \"all\""}
 
 [package.extras]
-a2a = ["a2a-sdk (>=0.2.4,<0.3.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-acp = ["acp-sdk (>=0.10.1,<0.11.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-beeai-platform = ["acp-sdk (>=0.10.1,<0.11.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-duckduckgo = ["duckduckgo-search (>=8.0.2,<9.0.0)"]
-langchain = ["langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)"]
-mcp = ["mcp (>=1.2.0,<2.0.0)"]
-search = ["duckduckgo-search (>=8.0.2,<9.0.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
+a2a = ["a2a-sdk (==0.2.13)", "uvicorn (>=0.34.2,<0.35.0)"]
+acp = ["acp-sdk (>=1.0.0,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)"]
+all = ["a2a-sdk (==0.2.13)", "acp-sdk (>=1.0.0,<2.0.0)", "ddgs (>=9.3.1,<10.0.0)", "fastapi (>=0.115.0,<0.116.0)", "langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "llama-index (>=0.12.42,<0.13.0)", "mcp (>=1.10.1,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
+beeai-platform = ["acp-sdk (>=1.0.0,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)"]
+duckduckgo = ["ddgs (>=9.3.1,<10.0.0)"]
+mcp = ["mcp (>=1.10.1,<2.0.0)"]
+rag = ["langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "llama-index (>=0.12.42,<0.13.0)", "markdown (>=3.8.2,<4.0.0)", "unstructured (>=0.17.2,<0.18.0)"]
+search = ["ddgs (>=9.3.1,<10.0.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
+watsonx-orchestrate = ["fastapi (>=0.115.0,<0.116.0)", "uvicorn (>=0.34.2,<0.35.0)"]
 wikipedia = ["wikipedia-api (>=0.8.1,<0.9.0)"]
 
 [[package]]
@@ -2128,4 +2130,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.13"
-content-hash = "b1b42832a23c246990c2df0084f6f0c2c7990e9814f265b818ce11b50a4a6b8f"
+content-hash = "73b6f22310480f5963f3f746c9f2f36992d84d2cb2ba62d45f6fef156b0d32c8"
